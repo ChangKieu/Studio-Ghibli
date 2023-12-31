@@ -1,0 +1,694 @@
+*{
+    font-family: 'Cabin', sans-serif;
+    margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    margin: 0 auto;
+    padding: 0;
+}
+.container{
+    margin-top: 100px;
+}
+/* HEADER */
+header{
+    position: fixed;
+    top: 0px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100vw;
+    background-color: white;
+    z-index: 10;
+}
+header li{
+    list-style: none;
+}
+header a{
+    text-decoration: none;
+    color: black;
+    font-size: 120%;
+}
+header img{
+    box-sizing: content-box;
+    width: auto;
+    height: 2.5rem;
+    padding: 5px 0;
+}
+header a:hover{
+    opacity: 0.7;
+}
+header .direction a:hover{
+    opacity: 0.7;
+    text-decoration: underline;
+}
+header .bar{
+    width: 100%;
+    height: 50px;
+    max-width: 100%;
+    margin: 0;
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+}
+header .bar li{
+    padding: 0.5rem 0;
+}
+header .menu{
+    padding: 5px 0;
+    display: flex;
+    gap: 2rem;
+    margin-right: 11.11vw;
+}
+
+header .logo{
+    margin-left: 11.11vw;
+}
+header .toggle{
+    color: black;
+    font-size: 2rem;
+    padding: 5px 0;
+    cursor: pointer;
+    display: none;
+    margin-right: 11.11vw;
+}
+/* DROPDOWWN */
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 0;
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    background-color: black;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+.dropdown_menu.open{
+    height: 350px;
+}
+.dropdown_menu li{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown_menu li a{
+    color: white;
+}
+.dropdown_menu li .line{
+    width: 50%;
+    border-bottom: 1px solid #D9D9D9;
+}
+/* RESPONSIVE */
+@media(max-width: 992px){
+    .bar .menu{
+        display: none;
+    }
+    .bar .toggle{
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+}
+@media(max-width: 570px){
+    .dropdown_menu{
+        width: unset;
+    }
+}
+.direction{
+    width: 100vw;
+    height: 50px;
+    background-color: #D9D9D9;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    left: 0; 
+    z-index: -1;
+}
+.direction div{
+    margin-left: 11.11vw;
+}
+.direction a{
+    font-size: 120%;
+    line-height: 50px;
+    color: black;
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+/* BACK TO TOP */
+/* bactotop */
+.backtotop{
+    position: fixed;
+    bottom: 2rem;
+    right: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    transition: 0.1s ease-out;
+    z-index: 1000;
+}
+.backtotop span{
+    color: white;
+    transition: 0.1s ease-out;
+    font-size: 2rem;
+}
+.backtotop:hover{
+    background-color:#6D6D6D;
+
+}
+.backtotop:hover span{
+    transform: translateY(-3px);
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* FOOTER */
+footer{
+    background-color: #D9D9D9;
+    width: 100%;
+    padding: 24px 0;
+    margin-top: 100px;
+    clear: both;
+}
+footer img{
+    display: block;
+    margin: 0 auto;
+    padding: 24px 0;
+}
+footer .social{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding-bottom: 24px;
+}
+footer .social a{
+    text-decoration: none;
+    color: black;
+    height: 25px;
+}
+footer .menu {
+    clear: both;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    list-style: none;
+    gap: 2rem;
+}
+footer .menu li a{
+    font-size: 14pt;
+    opacity: 0.7;
+    color: black;
+    text-decoration: none;
+}
+footer .line
+{
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+footer .coppyright{
+    padding-top: 24px ;
+    text-align: center;
+    opacity: 0.7;
+}
+footer .menu li a:hover{
+    opacity: 1;
+    text-decoration: underline;
+}
+footer .social a:hover{
+    opacity: 0.5;
+}
+.line{
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+
+/* LINK */
+.link{
+    margin: 0 11.11vw;
+    padding: 24px 0;
+}
+.link .lk{
+    font-size: 200%;
+    font-weight: bold;
+    padding: 24px 0;
+}
+.link .title{
+    background-color: black;
+    padding: 5px;
+    font-size: 150%;
+    clear: both;
+    margin-bottom: 12px;
+}
+.link .title a{
+    color: white;
+    text-decoration: none;
+}
+.link .tieude{
+    padding-bottom: 24px;
+}
+.link .img{
+    float: left;
+    padding-right: 24px;
+    margin-bottom: 48px;
+}
+.link .content{
+    font-size: 120%;
+    list-style-position: inside;
+    padding: 24px 0;
+    text-align: justify;
+}
+.link .title a:hover{
+    text-decoration: underline;
+}
+@media(max-width: 992px){
+    .link .title{
+        font-size: 120%;
+    }
+    .link .content{
+        font-size: 100%;
+    }
+}
+/* TỔNG QUAN */
+.tongquan{
+    margin: 0 11.11vw;
+    padding: 24px 0;
+}
+.tongquan b{
+    font-weight: bold;
+}
+.tongquan .title{
+    font-size: 200%;
+    font-weight: bold;
+    padding: 24px 0;
+}
+.tongquan .content{
+    border: 1px solid black;
+    font-size: 120%;
+    padding: 24px;
+    width: 50%;
+    margin-bottom: 48px;
+}
+.tongquan .content ol{
+    list-style-position: inside;
+}
+.tongquan .content a{
+    text-decoration: none;
+    color: black;
+}
+.tongquan .content span{
+    font-weight: bold;
+    padding-bottom: 24px;
+}
+.tongquan .content .list{
+    padding-left: 24px;
+}
+.tongquan .content a:hover{
+    text-decoration: underline;
+}
+.tongquan .noidung{
+    font-size: 120%;
+    padding: 24px 0;
+}
+.tongquan .noidung #tongquan{
+    background-color: black;
+    padding: 5px;
+    font-size: 150%;
+    clear: both;
+    margin-bottom: 12px;
+}
+.tongquan .noidung #tongquan p{
+    color: white;
+}
+.tongquan .noidung p{
+    font-weight: bold;
+}
+.tongquan .noidung .tieude{
+    font-size: 100%;
+    text-align: justify;
+    padding-bottom: 24px;
+}
+.tongquan .noidung.tieude span{
+    font-size: 100%;
+}
+.tongquan .noidung .tieude ul{
+    list-style-position: inside;
+}
+.tongquan .noidung #tengoi{
+    background-color: black;
+    padding: 5px;
+    font-size: 150%;
+    clear: both;
+    margin-bottom: 12px;
+}
+.tongquan .noidung #tengoi p{
+    color: white;
+}
+@media(max-width: 992px){
+    .tongquan .noidung #tengoi{
+        font-size: 120%;
+    }
+    .tongquan .noidung #tongquan{
+        font-size: 120%;
+    }
+    .tongquan .noidung{
+        font-size: 100%;
+    }
+    .tongquan .title{
+        font-size: 150%;
+    }
+    .tongquan .content{
+        font-size: 100%;
+    }
+}
+/* ABOUT US */
+.about{
+    margin: 0 11.11vw;
+    font-size: 120%;
+}
+.about .title{
+    font-size: 200%;
+    font-weight: bold;
+    padding: 32px 0;
+    clear: both;
+}
+.about a{
+    text-decoration: none;
+    color: black;
+}
+.about .studio img{
+    height: 25vh;
+    float: left;
+    margin: 24px 24px 32px 0;
+}
+.about b{
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+.about .lichsu{
+    clear: both;
+}
+.about .content{
+    margin-top: 24px;
+    line-height: 2.5;
+}
+.about button{
+    display: block;
+    margin: 24px auto;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-weight: normal;
+    font-size: 100%;
+}
+.about .more{
+    text-align: center;
+    clear: both;
+}
+.about .more a{
+    background-color: black;
+    color: white;
+    margin: 24px auto;
+    padding: 10px;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+/* DỰ ÁN */
+.duan{
+    margin: 0 11.11vw;
+    padding: 24px 0;
+}
+.duan .title{
+    background-color: black;
+    margin: 0 auto;
+    margin-top: 96px;
+    padding: 10px;
+    font-size: 150%;
+    clear: both;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 32px;
+}
+.duan .title a{
+    color: white;
+    text-decoration: none;
+}
+.duan .title a:hover{
+    text-decoration: underline;
+}
+.duan .gallery {
+    display: flex;
+    overflow-x: auto; 
+    overflow-y: hidden;
+    padding-right: 12px;
+    padding-bottom: 24px;
+    width: 70vw;
+    scroll-behavior: smooth; 
+}
+.duan .gallery::-webkit-scrollbar {
+    height: 12px; 
+}
+.duan .gallery::-webkit-scrollbar-thumb {
+    background-color: black; 
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+.duan .gallery::-webkit-scrollbar-thumb:hover {
+    background-color: #D9D9D9;
+}
+.duan .gallery::-webkit-scrollbar-track {
+    background-color: white; 
+}
+.duan .gallery img {
+    width: 252px;
+    height: 350px;
+    transition: transform 0.3s;
+}
+
+.duan .gallery .image-item {
+    width: 276px; 
+    padding: 12px;
+}
+
+.duan .gallery-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.duan .gallery-wrap .slider-btn {
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.duan .gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* FILM */
+.film-container{
+    margin: 0 11.11vw;
+    margin-top: 48px;
+}
+.film-container .title{
+    font-size: 200%;
+    font-weight: bold;
+    padding: 32px 0;
+    float: left;
+}
+.film-container .filters{
+    float: right;
+    padding: 32px 0;
+    font-size: 120%;
+}
+.filters select{
+    margin-left: 10px; 
+    background-color: #D9D9D9;
+    padding: 5px;
+}
+.filters button{
+    margin-left: 10px; 
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+.film-container .movies .movie-item img{
+    width: 262px;
+    height: 350px;
+}
+.film-container a{
+    text-decoration: none;
+}
+.film-container .movie-item .overlay {
+    width: 262px;
+    position: absolute;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    padding: 24px;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: opacity 0.3s ease;
+    bottom: 1%;
+}
+.film-container .movie-item:hover .overlay {
+    opacity: 1;
+}
+.film-container .movies {
+    clear: both;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(calc(25% - 10px), 1fr));
+    gap: 20px;
+}
+.film-container .movies .movie-item {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+@media (max-width: 992px) {
+    .film-container .movies {
+        grid-template-columns: repeat(2, minmax(calc(25% - 10px), 1fr));
+    }
+}
+/* Film - Slider */
+.slider{
+    width: 100vw;
+    max-width: 100%;
+    height: 640px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    margin-top: 100px;
+    transition: margin-top 0.5s ease;
+}
+.slider .list{
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+}
+.slider .list .item{
+    position: relative;
+}
+.slider .list .item .content{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-20%, -50%);
+    color: white;
+    text-align: right;
+    z-index: 1;
+    width: 40%; 
+}
+.slider .list .item .content p{
+    font-size: 200%;
+    font-weight: bold;
+}
+.slider .list .item .content div{
+    font-size: 150%;
+    word-wrap: break-word;
+}
+.slider .list .overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 1)); 
+}
+.slider .list img{
+    width: 100vw;
+    max-width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+.slider .buttons{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+.slider .buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    opacity: 0.5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+}
+.slider .dots{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.slider .dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.slider .dots li.active{
+    width: 30px;
+    background-color: #D9D9D9;
+}
+#next:active, #prev:active{
+    opacity: 0.7;
+}
+@media screen and (max-width: 992px){
+    .slider{
+        height: 400px;
+    }
+    .slider .list .item .content p{
+        font-size: 120%;
+    }
+    .slider .list .item .content div{
+        font-size: 100%;
+    }
+}
