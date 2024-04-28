@@ -1,0 +1,142 @@
+*{
+    font-family: 'Cabin', sans-serif;
+    margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    margin: 0 auto;
+    padding: 0;
+}
+header{
+    position: fixed;
+    top: 0px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100vw;
+    background-color: white;
+    z-index: 100;
+}
+header li{
+    list-style: none;
+}
+header a{
+    text-decoration: none;
+    color: black;
+    font-size: 120%;
+}
+header img{
+    box-sizing: content-box;
+    width: auto;
+    height: 2.5rem;
+    padding: 5px 0;
+}
+header a:hover{
+    opacity: 0.7;
+}
+header .direction a:hover{
+    opacity: 0.7;
+    text-decoration: underline;
+}
+header .bar{
+    width: 100%;
+    height: 50px;
+    max-width: 100%;
+    margin: 0;
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+}
+header .bar li{
+    padding: 0.5rem 0;
+}
+header .menu{
+    padding: 5px 0;
+    display: flex;
+    gap: 2rem;
+    margin-right: 11.11vw;
+}
+header .logo{
+    margin-left: 11.11vw;
+}
+header .toggle{
+    color: black;
+    font-size: 2rem;
+    padding: 5px 0;
+    cursor: pointer;
+    display: none;
+    margin-right: 11.11vw;
+}
+/* DROPDOWWN */
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 0;
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    background-color: black;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+.dropdown_menu.open{
+    height: 350px;
+}
+.dropdown_menu li{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown_menu li a{
+    color: white;
+}
+.line{
+    width: 50%;
+    border-bottom: 1px solid #D9D9D9;
+}
+/* RESPONSIVE */
+@media(max-width: 992px){
+    .bar .menu{
+        display: none;
+    }
+    .bar .toggle{
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+}
+@media(max-width: 570px){
+    .dropdown_menu{
+        width: unset;
+    }
+}
+.direction{
+    width: 100vw;
+    height: 50px;
+    background-color: #D9D9D9;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    left: 0; 
+    z-index: -1;
+}
+.direction div{
+    margin-left: 11.11vw;
+}
+.direction a{
+    font-size: 120%;
+    line-height: 50px;
+    color: black;
+    opacity: 0.5;
+    text-decoration: none;
+}
+
